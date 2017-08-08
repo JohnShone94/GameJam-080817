@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Arm
+  - Head
+  - Leg
+  - Torso
+  - SpawnPoint
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -13,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -40,4 +46,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 23171693
+    locked: 0
+  - name: Walls
+    uniqueID: 1337194487
+    locked: 0
+  - name: Head
+    uniqueID: 2807944699
+    locked: 0
+  - name: Player
+    uniqueID: 1218030517
+    locked: 0
+  - name: Arm
+    uniqueID: 3745816095
+    locked: 0
+  - name: Platform
+    uniqueID: 3389564623
     locked: 0
