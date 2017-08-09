@@ -43,9 +43,13 @@ public class PlayerMovement : MonoBehaviour {
         {
             xSpeed = 0;
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && legs.name != "Tracks(Clone)")
         {
             ySpeed = startYSpeed;
+        }
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            xSpeed /= 2.5f;
         }
         gameObject.transform.position = new Vector2(gameObject.transform.position.x + xSpeed, gameObject.transform.position.y + ySpeed);
         gameObject.transform.localScale = new Vector3(rotate, 2, 2);
@@ -56,5 +60,10 @@ public class PlayerMovement : MonoBehaviour {
     public void findLegs()
     {
         legs = GameObject.FindGameObjectWithTag("Leg");
+    }
+    public void resetHealth()
+    {
+        gameObject.GetComponent<PlayerHealth>().totalHealth = 0;
+        gameObject.GetComponent<PlayerHealth>().i = 0;
     }
 }

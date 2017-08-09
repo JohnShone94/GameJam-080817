@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212787921116720920}
   - component: {fileID: 114348033358924694}
   - component: {fileID: 60461581405392606}
+  - component: {fileID: 114826048310532106}
   m_Layer: 8
   m_Name: ArmRed
   m_TagString: Arm
@@ -86,6 +87,18 @@ MonoBehaviour:
   nextPart: {fileID: 1737841696883948, guid: ae6442a3c316c954a91465d22ef34a21, type: 2}
   platform: {fileID: 1938996933798390, guid: 99e3158a847642641926a30d56c0088e, type: 2}
   activatePlatform: 0
+--- !u!114 &114826048310532106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372984923612614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2eda03cbeb96e439415322dd7df977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partHealth: 30
 --- !u!212 &212787921116720920
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -116,7 +129,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -549151201
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d1e4da9edae613d43bf1e18fbdad3973, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

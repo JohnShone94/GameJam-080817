@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 212861250449145108}
   - component: {fileID: 114583128623496212}
   - component: {fileID: 60969792836102314}
+  - component: {fileID: 114792670099041446}
   m_Layer: 8
-  m_Name: LegsRed
+  m_Name: Tracks
   m_TagString: Leg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964712495024354}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7752483, y: -6.7276936, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.011203799, z: 0, w: 0.99993724}
+  m_LocalPosition: {x: 0.036257785, y: -1.1507931, z: -0.0000000022046578}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,8 +86,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextPart: {fileID: 1941620482285766, guid: 865c4b8fcc38cac43bfa49f13f1efb00, type: 2}
-  platform: {fileID: 1938996933798390, guid: 99e3158a847642641926a30d56c0088e, type: 2}
+  platform: {fileID: 0}
   activatePlatform: 0
+--- !u!114 &114792670099041446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964712495024354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2eda03cbeb96e439415322dd7df977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partHealth: 50
 --- !u!212 &212861250449145108
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -117,7 +130,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1218030517
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 17817ffe3735e3d4195a64920507c425, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212130813675054454}
   - component: {fileID: 114549561850682370}
   - component: {fileID: 60674761688338070}
+  - component: {fileID: 114488188379537698}
   m_Layer: 8
   m_Name: HeadBlue
   m_TagString: Head
@@ -73,6 +74,18 @@ PolygonCollider2D:
       - {x: 0.13, y: -0.06}
       - {x: 0.13, y: 0.06}
       - {x: 0.08, y: 0.11}
+--- !u!114 &114488188379537698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1388870840400656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2eda03cbeb96e439415322dd7df977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partHealth: 25
 --- !u!114 &114549561850682370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,7 +130,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1487022597
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7288eca36271184faa4e21da79017a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

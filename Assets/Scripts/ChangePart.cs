@@ -35,6 +35,7 @@ public class ChangePart : MonoBehaviour {
             newPart.transform.parent = gameObject.transform.parent;
             newPart.transform.localScale = new Vector3(1, 1, 1);
             gameObject.transform.parent.GetComponent<PlayerMovement>().findLegs();
+            gameObject.transform.parent.GetComponent<PlayerMovement>().resetHealth();
             Destroy(gameObject);
         }
     }

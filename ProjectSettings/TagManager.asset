@@ -10,6 +10,7 @@ TagManager:
   - Torso
   - SpawnPoint
   - Wall
+  - Cieling
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - PlayerParent
   - 
   - 
   - 
@@ -50,9 +51,6 @@ TagManager:
   - name: Background
     uniqueID: 23171693
     locked: 0
-  - name: Walls
-    uniqueID: 1337194487
-    locked: 0
   - name: Head
     uniqueID: 2807944699
     locked: 0
@@ -64,4 +62,7 @@ TagManager:
     locked: 0
   - name: Platform
     uniqueID: 3389564623
+    locked: 0
+  - name: Walls
+    uniqueID: 1337194487
     locked: 0

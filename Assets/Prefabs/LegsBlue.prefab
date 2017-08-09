@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212076627470403982}
   - component: {fileID: 114478232050166566}
   - component: {fileID: 60917518894275558}
+  - component: {fileID: 114021708785679950}
   m_Layer: 8
   m_Name: LegsBlue
   m_TagString: Leg
@@ -80,6 +81,18 @@ PolygonCollider2D:
       - {x: 0.089579105, y: -0.023905754}
       - {x: 0.011726618, y: 0.006266594}
       - {x: 0.031136036, y: 0.10691404}
+--- !u!114 &114021708785679950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1941620482285766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2eda03cbeb96e439415322dd7df977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partHealth: 25
 --- !u!114 &114478232050166566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +137,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1218030517
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4ea75fd8818747d4b952df163543ccdb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

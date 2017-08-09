@@ -16,11 +16,16 @@ public class PlayerBulletMoce : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        GetComponent<Rigidbody2D>().AddForce(transform.right * bulletSpeed * 10);
+        gameObject.transform.position += (transform.right * bulletSpeed);
+        //GetComponent<Rigidbody2D>().AddForce(transform.right * bulletSpeed * 10);
     }
     void OnCollisionStay2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+        if (coll.gameObject.tag == "Cieling")
         {
             Destroy(gameObject);
         }
