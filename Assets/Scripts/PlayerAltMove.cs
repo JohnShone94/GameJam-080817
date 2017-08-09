@@ -44,5 +44,6 @@ public class PlayerAltMove : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+        gameObject.GetComponent<SpriteRenderer>().color = Color.green;
     }
 }
