@@ -18,7 +18,7 @@ public class Spikes : MonoBehaviour
 
     void OnCollisonStay2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Player")
+      /*  if(col.gameObject.tag == "Player")
         {
             if(time >= 1.0f)
             {
@@ -31,7 +31,7 @@ public class Spikes : MonoBehaviour
                 time += Time.deltaTime;
             }
 
-        }
+        }*/
     }
     
 

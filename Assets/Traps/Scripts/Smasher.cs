@@ -42,7 +42,7 @@ public class Smasher : MonoBehaviour
                 down = true;
             }
         }
-        else if(gameObject.transform.position.y >= moveup.y)
+        else if (gameObject.transform.position.y >= moveup.y)
         {
             time += Time.deltaTime;
 
@@ -52,13 +52,12 @@ public class Smasher : MonoBehaviour
                 down = false;
             }
         }
-
         /**
         This script moves the smasher down and back up depedning on the boolean down.
         */
         if (gameObject.transform.position.y > movedown.y && !down)
         {
-            gameObject.tag = "Enemy";
+            gameObject.tag = "NotSafe";
             gameObject.GetComponent<Collider2D>().enabled = true;
             float downValue;
             if(movedown.y * downMovementSpeed > 0)

@@ -6,8 +6,11 @@ public class PlayerHealth : MonoBehaviour
 {
     public float totalHealth;
     float takenDamage;
+    public bool invun;
     public GameObject[] parts;
     public int i;
+    public float time;
+
 
     // Use this for initialization
     void Start()
@@ -22,12 +25,26 @@ public class PlayerHealth : MonoBehaviour
     {
         addHealth();
     }
-    void OnCollisionStay2D(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D coll)
     {
-        if(coll.gameObject.tag == "Enemy")
+        if(coll.gameObject.name == "Smasher" && coll.gameObject.tag == "NotSafe")
         {
             var takenDamage = coll.gameObject.GetComponent<EnemyDamage>().damage;
             totalHealth -= takenDamage;
+            checkHealth();
+            delay();
+        }
+    }
+    void OnCollisionStay2D(Collision2D stayAttack)
+    {
+        if (stayAttack.gameObject.tag == "Enemy")
+        {
+            var takenDamage = stayAttack.gameObject.GetComponent<EnemyDamage>().damage;
+            if (invun == false)
+            {
+                totalHealth -= takenDamage;
+                StartCoroutine(delay());
+            }
             checkHealth();
         }
     }
@@ -53,12 +70,17 @@ public class PlayerHealth : MonoBehaviour
             
         }
     }
-
     private void checkHealth()
     {
         if(totalHealth <= 0)
         {
             Destroy(gameObject);
         }
+    }
+    IEnumerator delay()
+    {
+        invun = true;
+        yield return new WaitForSeconds(time);
+        invun = false;
     }
 }

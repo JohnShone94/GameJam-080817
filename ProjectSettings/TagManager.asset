@@ -14,6 +14,7 @@ TagManager:
   - Enemy
   - Safe
   - ConBelt
+  - NotSafe
   layers:
   - Default
   - TransparentFX
