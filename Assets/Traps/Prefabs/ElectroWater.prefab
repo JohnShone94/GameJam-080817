@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4678988687574330}
   - component: {fileID: 212603452974552438}
   - component: {fileID: 60394374696465688}
-  - component: {fileID: 114777467788684860}
   - component: {fileID: 114259472891888442}
   m_Layer: 0
   m_Name: ElectroWater
@@ -82,20 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70b548fff4b5884092b7723daa2a037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thresholdOff: 6
+  thresholdOff: 3
   thresholdOn: 4
-  dmg: 5
---- !u!114 &114777467788684860
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1969642780103584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d4d40e4893ea54892208b345b28cd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   damage: 5
 --- !u!212 &212603452974552438
 SpriteRenderer:

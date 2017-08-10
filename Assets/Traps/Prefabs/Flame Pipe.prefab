@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4573599118616696}
   - component: {fileID: 212976510905024490}
   - component: {fileID: 61974689586845242}
-  - component: {fileID: 114048361161155148}
   - component: {fileID: 114560807293200310}
   m_Layer: 0
   m_Name: Flame Pipe
@@ -98,18 +97,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
---- !u!114 &114048361161155148
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1463119278695010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d4d40e4893ea54892208b345b28cd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
 --- !u!114 &114560807293200310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thresholdOff: 6
   thresholdOn: 4
-  dmg: 10
+  damage: 5
   flames: {fileID: 1909925779552596}
 --- !u!212 &212061918446026286
 SpriteRenderer:

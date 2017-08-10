@@ -10,7 +10,7 @@ public class Smasher : MonoBehaviour
     public float downMovementSpeed;
     public float downWaitTime;
     public float upWaitTime;
-    public int damage;
+    public float damage;
     
     //Private Variables.
     private Vector3 movedown;
@@ -75,6 +75,14 @@ public class Smasher : MonoBehaviour
             gameObject.tag = "Safe";
             gameObject.GetComponent<Collider2D>().enabled = false;
             gameObject.transform.position = transform.TransformPoint(0.0f, moveup.y / upMovementSpeed, 0.0f);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<PlayerHealth>().removeHealth(damage);
         }
     }
 }

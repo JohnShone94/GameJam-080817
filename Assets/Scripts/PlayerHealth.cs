@@ -25,7 +25,8 @@ public class PlayerHealth : MonoBehaviour
     {
         addHealth();
     }
-    void OnCollisionEnter2D(Collision2D coll)
+
+   /** void OnCollisionEnter2D(Collision2D coll)
     {
         if(coll.gameObject.name == "Smasher" && coll.gameObject.tag == "NotSafe")
         {
@@ -47,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
             }
             checkHealth();
         }
-    }
+    }**/
     public void addHealth()
     {
         parts[0] = GameObject.FindGameObjectWithTag("Head");
@@ -70,17 +71,17 @@ public class PlayerHealth : MonoBehaviour
             
         }
     }
+    public void removeHealth(float dmg)
+    {
+        totalHealth -= dmg;
+        checkHealth();
+    }
+
     private void checkHealth()
     {
         if(totalHealth <= 0)
         {
             Destroy(gameObject);
         }
-    }
-    IEnumerator delay()
-    {
-        invun = true;
-        yield return new WaitForSeconds(time);
-        invun = false;
     }
 }

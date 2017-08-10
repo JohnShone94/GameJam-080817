@@ -6,15 +6,18 @@ public class Flames : MonoBehaviour
 {
     public float thresholdOff;
     public float thresholdOn;
-    public float dmg;
+    public float damage;
     public GameObject flames;
 
     private bool fire;
     private float time;
+    private bool detected;
+    private GameObject Player;
     void Start ()
     {
         fire = false;
-	}
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
 
 	void Update ()
     {
@@ -23,7 +26,7 @@ public class Flames : MonoBehaviour
         {
             time += Time.deltaTime;
             flames.GetComponent<SpriteRenderer>().enabled = false;
-            gameObject.GetComponent<EnemyDamage>().damage = 0;
+
             if (time >= thresholdOff )
             {
                 time = 0.0f;
@@ -34,11 +37,6 @@ public class Flames : MonoBehaviour
         {
             time += Time.deltaTime;
             flames.GetComponent<SpriteRenderer>().enabled = true;
-            if (time >= 1.0f)
-            {
-                gameObject.GetComponent<EnemyDamage>().damage = dmg;
-                time = 0.0f;
-            }
 
             if (time >= thresholdOn)
             {
@@ -46,7 +44,42 @@ public class Flames : MonoBehaviour
                 fire = false;
             }
         }
+    }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            detected = true;
+        }
+        DetectedPlayer();
+    }
 
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            detected = false;
+        }
+        DetectedPlayer();
+    }
+
+    private void DetectedPlayer()
+    {
+        if (detected)
+        {
+            StartCoroutine(delayDamage());
+        }
+
+    }
+
+    IEnumerator delayDamage()
+    {
+        yield return new WaitForSeconds(1);
+        if (fire)
+        {
+            Player.GetComponent<PlayerHealth>().removeHealth(damage);
+        }
+        DetectedPlayer();
     }
 }
