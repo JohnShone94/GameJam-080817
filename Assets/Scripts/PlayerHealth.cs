@@ -28,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
         {
             var takenDamage = coll.gameObject.GetComponent<EnemyDamage>().damage;
             totalHealth -= takenDamage;
+            checkHealth();
         }
     }
     public void addHealth()
@@ -50,6 +51,14 @@ public class PlayerHealth : MonoBehaviour
                 i = 0;
             }
             
+        }
+    }
+
+    private void checkHealth()
+    {
+        if(totalHealth <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
