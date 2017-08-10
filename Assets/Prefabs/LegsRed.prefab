@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 60969792836102314}
   - component: {fileID: 114792670099041446}
   m_Layer: 8
-  m_Name: LegsRed
+  m_Name: Tracks
   m_TagString: Leg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
