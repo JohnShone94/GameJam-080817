@@ -11,6 +11,9 @@ TagManager:
   - SpawnPoint
   - Wall
   - Cieling
+  - Enemy
+  - Safe
+  - ConBelt
   layers:
   - Default
   - TransparentFX
@@ -65,4 +68,7 @@ TagManager:
     locked: 0
   - name: Walls
     uniqueID: 1337194487
+    locked: 0
+  - name: Enemy
+    uniqueID: 2843233505
     locked: 0

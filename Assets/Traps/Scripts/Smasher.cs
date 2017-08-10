@@ -58,6 +58,8 @@ public class Smasher : MonoBehaviour
         */
         if (gameObject.transform.position.y > movedown.y && !down)
         {
+            gameObject.tag = "Enemy";
+            gameObject.GetComponent<Collider2D>().enabled = true;
             float downValue;
             if(movedown.y * downMovementSpeed > 0)
             {
@@ -67,11 +69,12 @@ public class Smasher : MonoBehaviour
             {
                 downValue = movedown.y * downMovementSpeed;
             }
-
             gameObject.transform.position = transform.TransformPoint(0.0f, downValue, 0.0f);
         }
         else if (gameObject.transform.position.y < moveup.y && down)
         {
+            gameObject.tag = "Safe";
+            gameObject.GetComponent<Collider2D>().enabled = false;
             gameObject.transform.position = transform.TransformPoint(0.0f, moveup.y / upMovementSpeed, 0.0f);
         }
     }
